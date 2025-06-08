@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Button } from '@components-library/ui'
 import './App.css'
 
 function App() {
@@ -8,26 +7,48 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="min-h-screen bg-background text-foreground p-8">
+        <div className="max-w-2xl mx-auto space-y-8">
+          <h1 className="text-4xl font-bold">Component Library Playground</h1>
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold">Button Variants</h2>
+            
+            <div className="flex flex-wrap gap-4">
+              <Button onClick={() => setCount(count + 1)}>
+                Primary Button (Count: {count})
+              </Button>
+              
+              <Button variant="secondary">
+                Secondary
+              </Button>
+              
+              <Button variant="outline">
+                Outline
+              </Button>
+              
+              <Button variant="destructive">
+                Destructive
+              </Button>
+              
+              <Button variant="ghost">
+                Ghost
+              </Button>
+              
+              <Button variant="link">
+                Link
+              </Button>
+            </div>
+            
+            <div className="flex flex-wrap gap-4 items-center">
+              <Button size="sm">Small</Button>
+              <Button size="default">Default</Button>
+              <Button size="lg">Large</Button>
+              <Button size="icon">🚀</Button>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

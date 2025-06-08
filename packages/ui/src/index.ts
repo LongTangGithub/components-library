@@ -1,5 +1,9 @@
 // Export utility functions
 export { cn } from "./lib/utils"
 
-// Export components (we'll add these as we create them)
-// export { Button } from "./components/button"
+// Export components
+export { Button, buttonVariants } from "./components/button"
+export type { ButtonProps } from "./components/button"
+
+// Import styles
+import "./styles/globals.css"
